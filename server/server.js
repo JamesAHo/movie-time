@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === 'production') {
   }
   
   app.get('/', (req, res) => {
-    // res.sendFile(path.join(__dirname, '../client/build/index.html'));
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
     res.json([{id:1, username: "James"}, {id:2, username: "Jenny"}])
   });
 

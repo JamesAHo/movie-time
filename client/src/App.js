@@ -1,11 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import Header from './components/Header';
+
+
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <div className="App">
-      <p>Here we go</p>
-    </div>
+    <ApolloProvider client={client}>
+      <div className="flex-column justify-flex-start min-100-vh">
+        <Header />
+      </div>
+    </ApolloProvider>
   );
 }
 
