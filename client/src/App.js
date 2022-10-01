@@ -1,20 +1,10 @@
-import React from 'react';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import Header from './components/Header';
-
-
-const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache(),
-});
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <div className="flex-column justify-flex-start min-100-vh">
-        <Header />
+    <div className="App">
+      < Navbar/>    
       </div>
-    </ApolloProvider>
   );
 }
 
