@@ -23,5 +23,8 @@
   "homepage": "https://github.com/JamesAHo/movie-time#readme",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "react-router-dom": "^6.4.1"
   }
 }
