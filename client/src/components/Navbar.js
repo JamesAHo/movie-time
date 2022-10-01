@@ -1,29 +1,29 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
-import "./style/navbar.css"
+import {Link} from "react-router-dom";
+import "../styles/Navbar.css"
 
 function Navbar(props) {
   return (
     <div>
-      <Navbar className="nav-container" expand="lg"  sticky="top">
-        <NavLink className="nav-link" to="/">
+      <div className="nav-container" expand="lg"  sticky="top">
+        <Link to="/">
           <div class="text-light">
             <h4 class="nav-title-font">ScenAncis</h4>
           </div>
-        </NavLink>
+        </Link>
         <ul class="navbar-nav ml-auto navitem-indent">
           <li class="nav-item">
-            <NavLink to="/about">
+            <Link to="/about">
               <div class="nav-font text-light">Sign Up</div>
-            </NavLink>
+            </Link>
           </li>
           <li class="nav-item">
-            <NavLink to="/portfolio">
+            <Link to="/portfolio">
               <div class="nav-font text-light">Login</div>
-            </NavLink>
+            </Link>
           </li>
         </ul>
-      </Navbar>
+      </div>
     </div>
   );
 }
